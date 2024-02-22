@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Hugo 0.90.1" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+    <title>Jeebak&#39;s Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        .rad-fade-in {
+            will-change: opacity, transform;
+            animation-name: rad-fade-in-fallback;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rad-fade-in-fallback {
+            0% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fonts-loaded .rad-fade-in.rad-waiting {
+            animation-name: none;
+            opacity: 0;
+        }
+
+        .fonts-loaded .rad-fade-in.rad-animate {
+            animation-name: rad-fade-in;
+            animation-duration: 1.1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rad-fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .rad-fade-in-long {
+            will-change: opacity, transform;
+            animation-name: rad-fade-in-long-fallback;
+            animation-duration: 8s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rad-fade-in-long-fallback {
+            0% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fonts-loaded .rad-fade-in-long.rad-waiting {
+            animation-name: none;
+            opacity: 0;
+        }
+
+        .fonts-loaded .rad-fade-in-long.rad-animate {
+            animation-name: rad-fade-in-long;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rad-fade-in-long {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .rad-fade-down {
+            will-change: opacity, transform;
+            animation-name: rad-fade-down-fallback;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            transform: translateY(-30px);
+        }
+
+        @keyframes rad-fade-down-fallback {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            75% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fonts-loaded .rad-fade-down.rad-waiting {
+            animation-name: none;
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        .fonts-loaded .rad-fade-down.rad-animate {
+            animation-name: rad-fade-down;
+            animation-duration: 1.1s;
+        }
+
+        @keyframes rad-fade-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rad-scale-down {
+            will-change: opacity, transform;
+            animation-name: rad-scale-down-fallback;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            transform-origin: 50% 0;
+        }
+
+        @keyframes rad-scale-down-fallback {
+            0% {
+                opacity: 0;
+                transform: scaleY(0.95);
+            }
+            75% {
+                opacity: 0;
+                transform: scaleY(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+
+        .fonts-loaded .rad-scale-down.rad-waiting {
+            animation-name: none;
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        .fonts-loaded .rad-scale-down.rad-animate {
+            animation-name: rad-scale-down;
+            animation-duration: 1.1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rad-scale-down {
+            0% {
+                opacity: 0;
+                transform: scaleY(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+
+        .blog-post__image-container {
+            position: relative;
+        }
+
+        .blog-post__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .blog-post:hover .blog-post__overlay {
+            opacity: 1;
+        }
+
+        .blog-post__action {
+            color: white;
+            margin: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-post__action:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://mattdancho.netlify.app/css/main.css" />
+
+    <link rel="stylesheet" href="https://mattdancho.netlify.app/css/rad-icons.css" />
+
+    <link rel="stylesheet" href="https://mattdancho.netlify.app/css/custom.css" />
+
+
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top rad-animation-group" id="header">
+        <div class="container rad-fade-in">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a class="navbar-brand" href="######">
+        <span>Jee</span>
+        <span>Bak</span>
+        
+      </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#about">ABOUT</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#portfolio"
+              >PORTFOLIO</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#blogs"
+              >BLOGS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#services"
+              >SERVICES</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#contact"
+              >CONTACT</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+	
+	
+<section id="home" class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+  <div class="rad-showcase__bg">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://mattdancho.netlify.app/img/showcase/data-science.gif"
+      data-srcset="https://mattdancho.netlify.app/img/showcase/data-science.gif 1x, https://mattdancho.netlify.app/img/showcase/data-science.gif 2x"
+      alt=""
+    />
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+          <h1 class="display-1">
+            Hello, I’m Jeebak.
+            <br />
+            <span>Aspiring Data Scientist and Analyst </span>
+          </h1>
+<p class="lead">
+    Jeebak is currently pursuing his Bachelor's in the field of Data Science, and he's also passionate about Gaming and Sports web content.
+</p>
+
+<a href="mailto:jeebakbasak203@gmail.com" class="btn btn-primary">
+    <i class="bi bi-envelope"></i> Contact Jeebak
+    <img src="ndp5c948mb1d03bhn76m04e5h5.png" alt="Logo" style="width: 20px; height: 20px; margin-left: 10px;">
+</a>
+
+        </div>
+    </div>
+
+    <div class="row platform-links">
+        <div class="col-12">
+            <a href="https://www.linkedin.com/in/jeebak/" target="_blank">
+              <img src="linkedin-free-download-png-a6320cd17a70c85753a0cf0954388de6.png" alt="LinkedIn Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+            </a>
+    
+            <a href="https://github.com/JeebakZ" target="_blank">
+              <img src="github-logo-repository-computer-icons-github-4f62259da03e1590b862793c9af5b446.png" alt="GitHub Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+            </a>
+    
+            <a href="https://twitter.com/being_jz" target="_blank">
+              <img src="Twitter-X-Logo-PNG.png" alt="Twitter Logo" style=" width: 20px; height: 20px; margin-right: 10px;">
+            </a>
+    
+            <a href="https://www.instagram.com/sesh_nd_run/" target="_blank">
+              <img src="computer-icons-logo-instagram-3b1811dd9fe1881be26a4e4c50b20c59 (1).png" alt="YouTube Logo" style="width: 20px; height: 20px; margin-right: 10px;">
+            </a>
+        </div>
+    </div>
+</div>
+
+      
+      
+        </div>
+        <div class="rad-showcase__bg rad-showcase__bg--mobile">
+            <img class="lozad img-responsive" src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs=" data-src="https://mattdancho.netlify.app/img/showcase/data-science.gif" alt="" />
+        </div>
+        </section>
+
+
+
+
+        <section class="section rad-animation-group pb-20 pt-20 section--border-bottom" id="about">
+            <div class="container rad-fade-down">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="about__profile-picture">
+                            <img class="lozad img-responsive image-left-overflow" 
+                                 src="0f7538cd-8683-4da6-bbe8-a866d1775f07.jpg" 
+                                 alt="Profile Picture"
+                                 style="width: 150%; height: auto;"
+                            />
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-12 col-md-6 my-auto">
+                        <h2>Who am I?</h2>
+                        <p class="lead">
+                            <strong>An Aspiring Data Scienctist.</strong> My passion is training. But, when I am not making new courses or building software, I enjoy vacationing with my family and friends. And in free time trying to play with new data.
+                        </p>
+                        <p class="lead">
+                            <strong>My area of focus</strong> is applying data science to sports & games. I'm also love to write articles and blogs about latest video games and for sports, and making better decisions with data.
+                        </p>
+                        <a href="https://www.linkedin.com/in/jeebak/" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            About Me
+                            <img src="image-removebg-preview (2).png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;transform:translateY(-4px) rotate(25deg);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
+        <section id="portfolio" class="section section--border-bottom">
+            <div class="container">
+                <h2 class=" rad-animation-group rad-fade-down">
+                    Portfolio
+                </h2>
+
+
+                <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+
+                    <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+                        <h3>Sales Demand Forecast Application</h3>
+                        <p class="lead">
+                            This application helps Marketing &amp; Sales identify trends in product demand. The application is built in my Shiny Predictive Dashboards Course using Machine Learning.
+                        </p>
+                        <a href="https://github.com/JeebakZ" class="btn btn-primary" target="_blank">Launch Application<i class="icon-row-right">
+                            <img src="github-11-24.png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;">
+                            </i
+        ></a>
+                    </div>
+                    <div class="col-12 col-md-7 pl-md-0 text-right">
+                        <img class='lozad img-responsive img-clip-left-backward' src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs=" data-src="https://mattdancho.netlify.app/img/works/app_sales_demand_forecast.jpg" data-srcset="https://mattdancho.netlify.app/img/works/app_sales_demand_forecast.jpg 1x, https://mattdancho.netlify.app/img/works/app_sales_demand_forecast.jpg 2x"
+                            alt="Sales Demand Forecast Application" />
+                    </div>
+
+                </div>
+
+                <div class="row row--padded rad-animation-group rad-fade-down ">
+
+                    <div class="col-12 col-md-7 pl-md-0 text-right">
+                        <img class='lozad img-responsive img-clip-right-backward' src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs=" data-src="https://mattdancho.netlify.app/img/works/app_cannondale_price_prediction.jpg" data-srcset="https://mattdancho.netlify.app/img/works/app_cannondale_price_prediction.jpg 1x, https://mattdancho.netlify.app/img/works/app_cannondale_price_prediction.jpg 2x"
+                            alt="Product Price Recommendation" />
+                    </div>
+                    <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+                        <h3>Product Price Recommendation</h3>
+                        <p class="lead">
+                            This application helps Marketing &amp; R&amp;D Teams determine product gaps and price new products to fill the gaps using machine learning. The application is built in my Shiny Predictive Dashboards Course using Machine Learning.
+                        </p>
+                        <a href="https://github.com/JeebakZ" class="btn btn-primary" target="_blank">Launch Application<i class="icon-ar-right">
+                            <img src="github-11-24.png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;">
+                            </i
+        ></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <section id="experience" class="section section--border-bottom rad-animation-group">
+            <div class="container">
+                <div class="row flex-column-reverse flex-md-row rad-fade-down">
+                    <div class="col-12 col-sm-6 mt-5 mt-sm-0">
+
+                        <div class="experience">
+                            <div class="experience__date">Sept 2023 - Present</div>
+                            <div class="experience__title">Sports Writer</div>
+                            <div class="experience__company">Sports Writer, <a href='https://www.khelnow.com'>www.khelnow.com</a></div>
+                        </div>
+                        
+                        <div class="experience">
+                            <div class="experience__date">Dec 2022 - Present</div>
+                            <div class="experience__title">Gaming Sub-Editor</div>
+                            <div class="experience__company">Game in Touch, <a href='https://www.gameintouch.com'>www.gameintouch.com</a></div>
+                        </div>
+                        
+
+                       
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h2>Experience</h2>
+                        <p class="lead">
+                            Over 2+ years of experience working with web content companies from all over the world.Completed thorough research into assigned topics.I wrote and edited high-quality content and visually impactful programs under
+                            deadline pressure with exciting, captivating, and authentic approach.Crafted SEO-friendly content for websites and blog posts to increase organic traffic. I design & develop data science projects as my University semesters projects to explore more languages of data and for explore it.
+                        </p>
+                        <a href="https://www.linkedin.com/in/jeebak/" class="btn btn-primary" target="_blank">
+                            <img src="—Pngtree—linkedin white icon_3570423.png" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                            <i class="icon"></i>
+                            LinkedIn
+    
+                    <i class="icon-arrow"></i>
+                    <img src="white-arrow-png-41954.png" alt="Logo" style="width: 30px; height: 20px; margin-right: 10px;">    
+                </a>
+                        <a href="https://drive.google.com/file/d/1L6zMsJS0wGYCYSogfrSWr2CvRO0VTNYR/view?usp=sharing" class="btn btn-frameless" target="_blank">
+                            <img src="download.png" alt="Logo" style="width: 15px; height: 15px; margin-right: 10px;">
+                            <i class="iconfile-fill"></i>
+                    Download My Resume
+                    
+                </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="section section--border-bottom rad-animation-group">
+            <div class="container">
+                <div class="row rad-fade-down">
+                    <div class="col-12">
+                        <h2>Education</h2>
+                        <div class="row pt-2 pt-md-4">
+
+                            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                                <div class="education">
+                                    <div class="education__date">2021-Present</div>
+                                    <div class="education__title">CHRIST (Deemed to be University)</div>
+                                    <div class="education__degree">
+                                        Bachelor of Science (B.Sc)
+                                        Data Science
+                                        <a href='http://www.lavasa.christuniversity.in' target="_blank">www.lavasa.christuniversity.in</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                                <div class="education">
+                                    <div class="education__date">2019-2021</div>
+                                    <div class="education__title">BGHS</div>
+                                    <div class="education__degree">
+                                        WBCHSE Board
+                                        (Physics, Chemistry, Maths & Biology)
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                                <div class="education">
+                                    <div class="education__date">2010-2019</div>
+                                    <div class="education__title">The Scottish Church Collegiate School</div>
+                                    <div class="education__degree">
+                                        WBBSE Board
+                                        <a href='http://www.sccskolkata.in' target="_blank">www.sccskolkata.in</a>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section id="blogs" class="section rad-animation-group section--border-bottom">
+            <div class="container">
+                <h2 class="rad-fade-down">Blogs</h2>
+                
+        
+                        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+        
+                            <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+                    
+                                <p class="lead">
+                                    Hey there, Jeebak have interest in football and video games, so in free times he write about his thoughts by keyboard. You can check those out in KhelNow and GameinTouch.
+                                </p>
+                                
+                                <a href="https://khelnow.com/author-profile/jeebakbasak203" class="btn btn-primary" target="_blank">More
+                                    <img src="white-arrow-png-41954.png" alt="Logo" style="width: 30px; height: 20px; margin-right: 10px;">
+                                    <i class="iconight"></i
+                ></a>
+                            </div>
+                            <div class="col-12 col-md-7 pl-md-0 text-right">
+                                <img class='lozad img-responsive img-clip-left-backward' src="WhatsApp Image 2024-02-21 at 2.42.09 PM.jpeg" data-src="WhatsApp Image 2024-02-21 at 2.42.09 PM.jpeg"
+                                    alt="blogs" />
+                            </div>
+        
+                        </div>
+           
+                <div class="row row--padded mb-0 rad-fade-down">  
+
+                
+                      
+        
+                    <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post">
+                        <div class="blog-post__image-container">
+                            <img class="lozad blog-post__cover" src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FF5A0PWyWIAE0Ct9.jpg.webp&w=3840&q=75" data-src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FF5A0PWyWIAE0Ct9.jpg.webp&w=3840&q=75" alt="Blog 1 Cover" widht="400" height="200" />
+                            <div class="blog-post__overlay">
+                                <a href="https://khelnow.com/football/2024-01-world-football-clubs-most-revenue-generated-2023" target="_blank" rel="noopener noreferrer" class="blog-post__action">Read</a>
+                                <span class="blog-post__action">Share</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-post__heading rad-fade-down">Top 10 clubs with most revenue generated in 2023</h3>
+                        <p class="blog-post__meta rad-fade-down">In the dynamic realm where passion converges with business, the financial success of top soccer clubs serves as a testament to the global influence of the sport. .</p>
+                    </div>
+        
+                    <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post">
+                        <div class="blog-post__image-container">
+                            <img class="lozad blog-post__cover" src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FRonaldo-Benzema-and-Mane.jpg.webp&w=3840&q=75" data-src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FRonaldo-Benzema-and-Mane.jpg.webp&w=3840&q=75" alt="Blog 2 Cover" widht="400" height="200"/>
+                            <div class="blog-post__overlay">
+                                <a href="https://khelnow.com/football/2023-09-world-football-favourites-win-saudi-pro-league-2023-24-golden-boot" target="_blank" rel="noopener noreferrer" class="blog-post__action">Read</a>
+                                <span class="blog-post__action">Share</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-post__heading rad-fade-down">Top seven favourites to win Saudi Pro League 2023-24 Golden Boot</h3>
+                        <p class="blog-post__meta rad-fade-down">The Saudi Pro League has taken the footballing world by storm in the 2023-24 season, thanks to a lavish summer shopping spree that brought some of Europe's biggest stars to the Middle East.</p>
+                    </div>
+        
+                    <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post">
+                        <div class="blog-post__image-container">
+                            <img class="lozad blog-post__cover" src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FHarry-Kane-Bayern-Munich-Bundesliga-2023-24-hat-trick.jpeg.webp&w=3840&q=75" data-src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FHarry-Kane-Bayern-Munich-Bundesliga-2023-24-hat-trick.jpeg.webp&w=3840&q=75" alt="Blog 3 Cover" widht="400" height="200"/>
+                            <div class="blog-post__overlay">
+                                <a href="https://khelnow.com/football/2023-09-world-football-english-players-score-hattrick-bundesliga" target="_blank" rel="noopener noreferrer" class="blog-post__action">Read</a>
+                                <span class="blog-post__action">Share</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-post__heading rad-fade-down">Top four English players to score a hattrick in Bundesliga</h3>
+                        <p class="blog-post__meta rad-fade-down">The Bundesliga, Germany's premier football league, has long been a theatre of footballing excellence, a stage where talents from across the globe come together to create moments of magic.</p>
+                    </div>
+        
+                </div>
+            </div>
+            
+        </section>
+        
+        <section id="services" class="section rad-animation-group section--border-bottom">
+            <div class="container">
+                <h2 class="rad-fade-down">Services</h2>
+
+                        <div class="row row--padded rad-animation-group rad-fade-down ">
+
+                            <div class="col-12 col-md-7 pl-md-0 text-right">
+                                <img class='lozad img-responsive img-clip-right-backward' src="WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg" data-src="WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg" data-srcset="WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg 1x, WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg 2x"
+                                    alt="Product Price Recommendation" />
+                            </div>
+                            <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+                                <h3>Data Analysis</h3>
+                                <p class="lead">
+                                    Looking for better oppurtunites as Internship or Freelancing in the field of Data Scince.
+                                </p>
+                                <a href="https://wa.me/918697534158 " class="btn btn-primary" target="_blank"> Wanna Hire!
+                                    <img src="whatsapp-32.png" alt="Logo" style="width: 20px; height: 20px; margin-left: 10px;">
+                                        </i
+                ></a>
+
+                <h3>Web Content Writing</h3>
+                                <p class="lead">
+                                    Having 2+ years experience in SEO Optimization and creative content writings.
+                                </p>
+                                <a href="https://wa.me/918697534158 " class="btn btn-primary" target="_blank">Wanna Hire!
+                                    <i class="icon-arrow-t">
+                                        <img src="whatsapp-32.png" alt="Logo" style="width: 20px; height: 20px; margin-left: 10px;">
+                                        </i
+                ></a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </section>
+        
+
+
+                <section id="contact" class="section section--contact pt-0">
+                    <div class="container">
+                        <div class="contact">
+                            <h2>Get in touch with Jeebak</h2>
+                            <div class="row pt-2">
+                                <img class="lozad img-responsive image-left-overflow" src="WhatsApp Image 2024-02-16 at 5.29.32 PM.jpeg"
+                                    alt="Profile Picture" style="width: 30%; height: auto;" />
+                
+                                <div class="col-12 col-lg-5 contact__info">
+                                    <h4>Phone Number</h4>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                
+                                    <h4>Email</h4>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                
+                                
+                                    <h4>Queries</h4>
+                                    <textarea id="queries" name="queries" placeholder="Enter your queries"></textarea>
+                
+                                    <br /><br />
+                                    <button class="btn btn-primary" onclick="sendMessage()">
+                                        <i class="icon-ml-fill">
+
+                                        </i>
+                                        Send Message
+                                        <img src="—Pngtree—white message icon_4631512.png" alt="Logo" style="width: 30px; height: 30px; margin-left: 10px;">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <script>
+                    function sendMessage() {
+                       
+                        var phoneNumber = document.getElementById("phoneNumber").value;
+                        var email = document.getElementById("email").value;
+                        var address = document.getElementById("address").value;
+                        var queries = document.getElementById("queries").value;
+                
+                       
+                        console.log("Phone Number: " + phoneNumber);
+                        console.log("Email: " + email);
+                        console.log("Address: " + address);
+                        console.log("Queries: " + queries);
+                
+                        
+                    }
+                </script>
+                
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__left">
+                    <div class="footer__copy">
+                        © Jeebak. All rights reserved. 2024
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#about">ABOUT</a
+            >
+
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#portfolio"
+                              >PORTFOLIO</a
+                            >
+                          </li>
+
+                          <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#contact"
+                              >CONTACT</a
+                            >
+                          </li>
+
+                    </ul>
+                </div>
+
+                <div class="footer__right">
+                    <div class="footer__copy">
+                        Site built by Jz with
+
+
+
+
+
+
+                    </div>
+
+                </div>
+                <img src="image-removebg-preview (2).png" alt="Logo" style="width: 30px; height: 30px; transform: translateY(-8px) rotate(25deg);">
+
+
+            </div>
+        </footer>
+
+        <script src='https://mattdancho.netlify.app/js/rad-animations.js'></script>
+        <script src='https://mattdancho.netlify.app/js/library/lozad.min.js'></script>
+        <script>
+            window.addEventListener("load", function() {
+                var observer = window.lozad(".lozad", {
+                    rootMargin: window.innerHeight / 2 + "px 0px",
+                    threshold: 0.01
+                });
+                observer.observe();
+            });
+        </script>
+        <script src=''></script>
+        <script src='https://mattdancho.netlify.app/js/library/bootstrap.min.js'></script>
+        <script src='https://mattdancho.netlify.app/js/sticky-header.js'></script>
+        <script src='https://mattdancho.netlify.app/js/library/smooth-scroll.polyfills.min.js'></script>
+        <script src='https://mattdancho.netlify.app/js/library/fontfaceobserver.js'></script>
+        <script>
+            (function(w) {
+
+                if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+                    return;
+                }
+                var fontA = new w.FontFaceObserver("Inter", {
+                    weight: 300
+                });
+                var fontB = new w.FontFaceObserver("Inter", {
+                    weight: 400
+                });
+                var fontC = new w.FontFaceObserver("Inter", {
+                    weight: 500
+                });
+                var fontD = new w.FontFaceObserver("Inter", {
+                    weight: 600
+                });
+                var fontE = new w.FontFaceObserver("Inter", {
+                    weight: 700
+                });
+                var fontF = new w.FontFaceObserver("Inter", {
+                    weight: 900
+                });
+                w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
+                    w.document.documentElement.className += " fonts-loaded";
+                });
+            })(this);
+        </script>
+        <script>
+            const scroll = new SmoothScroll('a[href*="#"]');
+            $('a.nav-link').on('click', () => {
+                const navbar = $('.navbar-collapse');
+                if (navbar && navbar.hasClass('show')) {
+                    $('.navbar-toggler').click();
+                }
+            })
+        </script>
+
+
+</body>
+
+</html>

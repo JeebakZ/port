@@ -1,0 +1,1748 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.90.1" />
+
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<title>Jeebak's Portfolio</title>
+<link rel="icon" type="image/x-icon" href="img\logos\favicon.png">
+<style>
+
+
+
+
+  /* Smooth fade effect between carousel items */
+  .carousel-item {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-item.active {
+      opacity: 1;
+  }
+
+
+
+/* Service row styling */
+.service-row {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-row:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+}
+
+/* Service row header */
+.service-row h3 {
+    margin-bottom: 10px;
+}
+
+/* Service row paragraph */
+.service-row p {
+    color: #555;
+}
+
+
+    /* Certificates Section Styling */
+    #certificates {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        #certificates h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .certificate-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Left side: Image and navigation buttons */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            position: relative;
+        }
+
+        .image-container img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Animation: Enlarge image on hover */
+        .image-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation buttons */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .arrow-button {
+            font-size: 24px;
+            color: #ec4434;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.3s ease;
+        }
+
+        .arrow-button:hover {
+            color: #ec4434;
+        }
+
+        .arrow-button:disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Right side: Certificate details */
+        .details-container {
+            flex: 2;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-container h3 {
+            font-size: 1.8rem;
+            color: #ec4434;
+            margin-bottom: 10px;
+        }
+
+        .details-container p {
+            font-size: 1rem;
+            color: #555;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .details-container strong {
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .certificate-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .details-container {
+                margin-top: 20px;
+            }
+        }
+
+
+    /* Back to Top Button Styling */
+    .backto-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ec4434;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+
+        .backto-top i {
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        /* Show the button when scrolling down */
+        .backto-top.show {
+            display: block;
+        }
+
+
+  
+
+
+.cd-words-wrapper {
+          font-family: 'Fira Code', monospace;
+            display: inline-block;
+            position: relative;
+            font-size: 40px;
+            white-space: nowrap;
+        }
+
+        #text {
+            display: inline-block;
+            border-right: 2px solid #ec4434; /* Simulate typing cursor */
+            padding-right: 5px;
+            animation: blink 0.7s step-end infinite; /* Blinking cursor animation */
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    @keyframes rad-fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+     
+    .rad-fade-in-long {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-long-fallback;
+        animation-duration: 8s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+        0% {
+            opacity: 0;
+        }
+
+        75% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+        animation-name: rad-fade-in-long;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+     
+    .rad-fade-down {
+        will-change: opacity, transform;
+        animation-name: rad-fade-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        75% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+        animation-name: rad-fade-down;
+        animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+     
+    .rad-scale-down {
+        will-change: opacity, transform;
+        animation-name: rad-scale-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        75% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+        animation-name: rad-scale-down;
+        animation-duration: 1.1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://mattdancho.netlify.app/css/main.css"/>
+
+<link rel="stylesheet" href="https://mattdancho.netlify.app/css/rad-icons.css"/>
+
+<link rel="stylesheet" href="https://mattdancho.netlify.app/css/custom.css"/>
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    
+
+
+</head>
+
+<body>
+
+	<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <a class="navbar-brand" href="https://jeebakz.github.io/port/">
+        <span>Jee</span>
+        <span>Bak</span>
+        
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent, #header"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">HOME</a>
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#about"
+              >ABOUT</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#portfolio"
+              >PORTFOLIO</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#experience"
+              >EXPERIENCE</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#education"
+              >EDUCATION</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#skills"
+              >SKILLS</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#blogs"
+              >BLOGS</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#certificates"
+              >CERTIFICATES</a
+            >
+          </li>
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#services"
+              >SERVICES</a
+            >
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#contact"
+              >CONTACT</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+	
+	
+<section id="home" class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+  <div class="rad-showcase__bg">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://mattdancho.netlify.app/img/showcase/data-science.gif"
+      data-srcset="https://mattdancho.netlify.app/img/showcase/data-science.gif 1x, https://mattdancho.netlify.app/img/showcase/data-science.gif 2x"
+      alt=""
+    />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+        <h1 class="display-1">
+          Hello, I’m Jeebak.
+          <br />
+
+          <div class="cd-words-wrapper">
+            <span id="text"></span> <!-- Text will change here -->
+        </div>
+        
+
+        </h1>
+        <p class="lead">
+          Jeebak is currently pursuing his Bachelor's in the field of Data Science, and he's also passionate about Gaming and Sports web content.
+    
+        </p>
+        <a href="mailto:jeebakbasak203@gmail.com" class="btn btn-primary">
+          <i class="bi bi-envelope"></i> Contact Jeebak
+          <img src="img\logos\ndp5c948mb1d03bhn76m04e5h5.png" alt="Logo" style="width: 20px; height: 20px; margin-left: 10px;">
+      </a>
+      
+              </div>
+          </div>
+      
+          <div class="row platform-links" style="margin-top: 10px;">
+            
+            <h4 class="lead" style="margin-left: 12px;font-weight: normal; font-size: 22px; color: #000000;">Find me</h4>
+            <div class="col-12">
+                <a href="https://www.linkedin.com/in/jeebak/" target="_blank">
+                  <img src="img\logos\linkedin-free-download-png-a6320cd17a70c85753a0cf0954388de6.png" alt="LinkedIn Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                </a>
+        
+                <a href="https://github.com/JeebakZ" target="_blank">
+                  <img src="img\logos\github-logo-repository-computer-icons-github-4f62259da03e1590b862793c9af5b446.png" alt="GitHub Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                </a>
+        
+              <a href="https://medium.com/@jeebakbasak203" target="_blank">
+                  <img src="img\logos\medium_logo_icon_187624.png" alt="Medium Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                </a>
+        
+                <a href="https://twitter.com/being_jz" target="_blank">
+                  <img src="img\logos\Twitter-X-Logo-PNG.png" alt="Twitter Logo" style=" width: 20px; height: 20px; margin-right: 10px;">
+                </a>
+        
+                <a href="https://www.instagram.com/sesh_nd_run/" target="_blank">
+                  <img src="img\logos\computer-icons-logo-instagram-3b1811dd9fe1881be26a4e4c50b20c59 (1).png" alt="Instagram Logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                </a>
+    
+                <a href="https://public.tableau.com/app/profile/jeebak.basak/vizzes" target="_blank">
+                    <img src="img\logos\tableau_logo_icon_144818.png" alt="Tableau Logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                  </a>
+            </div>
+        </div>
+    </div>
+  <div class="rad-showcase__bg rad-showcase__bg--mobile">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://mattdancho.netlify.app/img/showcase/data-science.gif"
+      alt=""
+    />
+  </div>
+</section>
+
+
+	
+	
+<section class="section rad-animation-group pb-20 pt-20 section--border-bottom" id="about">
+  <div class="container rad-fade-down">
+    <div class="row d-flex flex-column-reverse flex-md-row">
+      <div class="about__profile-picture col-12 col-md-6">
+        <img
+  class="lozad img-responsive image-left-overflow"
+  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+  data-src="img\who-am-i\user-picture-2.png"
+  data-srcset="img\who-am-i\user-picture-2.png 1x, img\who-am-i\user-picture-2.png  1x"
+  alt="Profile Picture"
+  style="margin-left: 50px; width: 260px; height: 415px;"
+/>
+
+      </div>
+      <div class="col-12 col-md-6 my-auto my-auto">
+        <h2>Who am I?</h2>
+                        <p class="lead">
+                            <strong>An Aspiring Data Scienctist.</strong> My passion is training. But, when I am not making new courses or building software, I enjoy vacationing with my family and friends. And in free time trying to play with new data.
+                        </p>
+                        <p class="lead">
+                            <strong>My area of focus</strong> is applying data science to sports & games. I'm also love to write articles and blogs about latest video games and for sports, and making better decisions with data.
+                        </p>
+                        <a href="https://www.linkedin.com/in/jeebak/" target="_blank" class="btn btn-primary">
+                          <i class="bi bi-envelope"></i>
+                          About Me
+                          <img src="img\logos\image-removebg-preview (2).png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;transform:translateY(-4px) rotate(25deg);">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+	
+	
+<section id="portfolio" class="section section--border-bottom">
+  <div class="container">
+    <h2 class=" rad-animation-group rad-fade-down">
+      Portfolio
+    </h2>
+    
+    
+    <div
+      class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+    >
+      
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Top 5 European League (2023-24) Players Scouting Application</h3>
+        <p class="lead">
+          This application helps in Scouting and analyzing players' performances across the top 5 European leagues (Premier League, La Liga, Bundesliga, Serie A, and Ligue 1) by evaluating their Passing, Crossing Skills, and Expected Goals and Assists. It aids teams in building optimal squads using machine learning. The application is built in Tableau using the 2023-24 season players' performance data from FBREF. </p>
+          <a href="https://public.tableau.com/app/profile/jeebak.basak/viz/Ligue123-24Scouting/Dashboard5" class="btn btn-primary" target="_blank">Launch Application<i class="icon-row-right">
+            <img src="img\logos\pngwing.com.png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;">
+            </i
+        ></a>
+      </div>
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-left-backward'
+          src="img\works\Copy of Foo-pY (2).png"
+          data-src="img\works\Copy of Foo-pY (2).png"
+          data-srcset="img\works\Copy of Foo-pY (2).png 1x, img\works\Copy of Foo-pY (2).png 2x"
+          alt="Top 5 European League (2023-24) Players Scouting Application"
+        />
+      </div>
+      
+    </div>
+    
+    <div
+      class="row row--padded rad-animation-group rad-fade-down "
+    >
+      
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-right-backward'
+          src="img\works\Foo-pY (1).png"
+          data-src="img\works\Foo-pY (1).png"
+          data-srcset="img\works\Foo-pY (1).png 1x, img\works\Foo-pY (1).png 2x"
+          alt="Foo-py: Football Analysis Web Application"
+        />
+      </div>
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Foo-py: Football Analysis Web Application</h3>
+        <p class="lead">
+          Foo-py helps football analysts and coaches gain deep insights into match performance and player dynamics by visualizing passing networks, player passes, and heatmaps, using data from matches such as the Turkey vs Portugal Euro 2024 game.</p>
+          <a href="https://jeebakz.github.io/port-foopy/" class="btn btn-primary">Launch Application<i class="icon-ar-right">
+            <img src="img\logos\streamlit-mark-light.png" alt="Logo" style="width: 25px; height: 25px; margin-left: 10px;">
+            </i
+        ></a>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+	
+	
+<section id="experience" class="section section--border-bottom rad-animation-group">
+    <div class="container">
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+            <div class="col-12 col-sm-6 mt-5 mt-sm-0">
+                
+              <div class="experience">
+                <div class="experience__date">Apr 2024 - Present</div>
+                <div class="experience__details" style="display: flex; align-items: center;">
+                    <div class="experience__logo" style="margin-right: 10px;">
+                        <img src="img\works\UNCW.png" alt="UNCW Logo" style="width:50px; height:auto;">
+                    </div>
+                    <div>
+                        <div class="experience__title">Perfomance Analyst</div>
+                        <div class="experience__company">UNCW Women's Soccer, <a href="https://www.uncwsports.com">www.uncwsports.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+<div class="experience">
+                <div class="experience__date">Apr 2024 - May 2024</div>
+                <div class="experience__details" style="display: flex; align-items: center;">
+                    <div class="experience__logo" style="margin-right: 10px;">
+                        <img src="img\works\sk.jpg" alt="SportsKeeda Logo" style="width:50px; height:auto;">
+                    </div>
+                    <div>
+                        <div class="experience__title">Sports Writer (Contributor)</div>
+                        <div class="experience__company">Sportskeeda, <a href="https://www.sportskeeda.com/">www.sportskeeda.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="experience__date">Sept 2023 - Mar 2024</div>
+                <div class="experience__details" style="display: flex; align-items: center;">
+                    <div class="experience__logo" style="margin-right: 10px;">
+                        <img src="img\works\khelnow.png" alt="Khel Now Logo" style="width:50px; height:auto;">
+                    </div>
+                    <div>
+                        <div class="experience__title">Sports Writer</div>
+                        <div class="experience__company">KhelNow, <a href="https://www.khelnow.com">www.khelnow.com</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience">
+                <div class="experience__date">Dec 2022 - Jan 2024</div>
+                <div class="experience__details" style="display: flex; align-items: center;">
+                    <div class="experience__logo" style="margin-right: 10px;">
+                        <img src="img\works\gameintouch.png" alt="Game In Touch Logo" style="width:50px; height:auto;">
+                    </div>
+                    <div>
+                        <div class="experience__title">Gaming Sub-Editor</div>
+                        <div class="experience__company">Game in Touch, <a href="https://www.gameintouch.com">www.gameintouch.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+            <div class="col-12 col-sm-6">
+                <h2>Experience</h2>
+                <p class="lead">
+                  Over 2+ years of experience in data science and analytics, specializing in turning raw data into actionable insights. Proficient in Python, SQL, Tableau, and Power BI for data processing, visualization, and reporting. I design and develop data science projects, exploring advanced techniques like predictive modeling, clustering, and classification. Skilled in analyzing complex datasets to support strategic decision-making, I’ve worked on projects such as passing networks, xG visualizations, and performance dashboards. My passion lies in leveraging analytics to solve real-world problems, particularly in sports, where I use data-driven approaches to enhance performance and uncover valuable insights.
+                </p>
+                <a href="https://www.linkedin.com/in/jeebak/" class="btn btn-primary" target="_blank">
+                  <img src="img\logos\—Pngtree—linkedin white icon_3570423.png" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                  <i class="icon"></i>
+                  LinkedIn
+
+          <i class="icon-arrow"></i>
+          <img src="img\logos\white-arrow-png-41954.png" alt="Logo" style="width: 30px; height: 20px; margin-right: 10px;">    
+      </a>
+              <a href="https://drive.google.com/file/d/1YK9pkxjlqdv0Ezdc0fa3lcCiIOKDWAmd/view?usp=drivesdk" class="btn btn-frameless" target="_blank">
+                  <img src="img\logos\download.png" alt="Logo" style="width: 15px; height: 15px; margin-right: 10px;">
+                  <i class="iconfile-fill"></i>
+          Download My Resume
+          
+      
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+	
+	
+<section  id="education" class="section section--border-bottom rad-animation-group">
+    <div class="container">
+        <div class="row rad-fade-down">
+            <div class="col-12">
+                <h2>Education</h2>
+                <div class="row pt-2 pt-md-4">
+                    
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                          <div class="education__date">2021-Present</div>
+                          <div class="education__title">
+                            <img src="img\logos\images-removebg-preview.png" alt="CHRIST University Logo" style="width:50px; height:auto; vertical-align:middle;"> 
+                            CHRIST (Deemed to be University)
+                        </div>
+                          <div class="education__degree">
+                              Bachelor of Science (B.Sc)
+                              Data Science
+                              <a href='http://www.lavasa.christuniversity.in' target="_blank">www.lavasa.christuniversity.in</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                      <div class="education">
+                          <div class="education__date">2019-2021</div>
+                          <div class="education__title">
+                            <img src="img\logos\27335-removebg-preview.png" alt="bnghs Logo" style="width:50px; height:auto; vertical-align:middle;"> 
+                            BGHS</div>
+                          <div class="education__degree">
+                              WBCHSE Board
+                              (Physics, Chemistry, Maths & Biology)
+                              <a href='https://school.banglarshiksha.gov.in/ws/website/index/19114400710' target="_blank">www.banglarshiksha.gov.in</a>
+                              
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                      <div class="education">
+                          <div class="education__date">2010-2019</div>
+                          <div class="education__title">
+                            <img src="img\logos\image-removebg-preview (18).png" alt="Scottish Church Collegiate School Logo" style="width:50px; height:auto; vertical-align:middle;"> 
+                            The Scottish Church Collegiate School</div>
+                          <div class="education__degree">
+                              WBBSE Board
+                              <a href='http://www.sccskolkata.in' target="_blank">www.sccskolkata.in</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  id="skills" class="section rad-animation-group section--border-bottom">
+  <div class="container">
+      <h2 class="rad-fade-down">Skills</h2>
+      <div class="row row--padded mb-0 rad-fade-down">
+          <div class="col-12 col-md-6 mb-4">
+              <h4>Programming & Technical Proficiency</h4>
+              <div class="skill">
+                  <p>Python</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="90"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>R</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="80"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>SQL</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="85"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Hadoop</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="70"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Hive</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="75"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>NoSQL</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="80"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Snowflake</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="65"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>HTML & CSS</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="75"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Django Framework</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="70"></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-6 mb-4">
+              <h4>Data Science & Analytics</h4>
+              <div class="skill">
+                  <p>Data Analysis</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="85"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Machine Learning</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="85"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Deep Learning</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="75"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Image Processing</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="70"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Tableau</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="75"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Sports Analytics</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="90"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Data Engineering</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="80"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Data Mining</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="75"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Data Transformation & Cleaning</p>
+                  <div class="progress">
+                      <div class="progress-bar" data-skill="85"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="blogs" class="section rad-animation-group section--border-bottom">
+  <div class="container">
+      <h2 class="rad-fade-down" data-aos="fade-up">Blogs</h2>
+
+      <!-- Introduction Section -->
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" data-aos="fade-up">
+          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+              <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                  Hey there, Jeebak has an interest in football and video games. In his free time, he writes about his thoughts using his keyboard. You can check those out on Medium, Sportskeeda, KhelNow, Footytimes, BreakingTheLines, The Football Digest, and GameinTouch.
+              </p>
+              <a href="https://khelnow.com/author-profile/jeebakbasak203" class="btn btn-primary" target="_blank" data-aos="fade-up" data-aos-delay="400">
+                  More
+                  <img src="img\logos\white-arrow-png-41954.png" alt="Logo" style="width: 30px; height: 20px; margin-right: 10px;">
+              </a>
+          </div>
+          <div class="col-12 col-md-7 pl-md-0 text-right">
+              <img class="lozad img-responsive img-clip-left-backward" 
+                   src="img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.09 PM.jpeg" 
+                   data-src="img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.09 PM.jpeg" 
+                   alt="blogs" 
+                   data-aos="fade-left"
+                   data-aos-delay="500" />
+          </div>
+      </div>
+
+      <!-- Blog Post Section -->
+<div class="row row--padded mb-0 rad-fade-down" data-aos="fade-up" data-aos-delay="600">
+  <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post">
+      <div class="blog-post__image-container">
+          <img class="lozad blog-post__cover" 
+               src="https://staticg.sportskeeda.com/editor/2024/04/c2151-17133501030138-1920.jpg" 
+               data-src="https://staticg.sportskeeda.com/editor/2024/04/c2151-17133501030138-1920.jpg" 
+               alt="Blog 1 Cover" width="400" height="200" 
+               data-aos="fade-up" />
+          <div class="blog-post__overlay">
+              <a href="https://www.sportskeeda.com/football/news-i-think-it-s-difficult-chris-sutton-chooses-chelsea-star-cole-palmer-manchester-city-s-rodri-player-year" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="blog-post__action">Read</a>
+              <span class="blog-post__action" onclick="share('https://www.sportskeeda.com/football/news-i-think-it-s-difficult-chris-sutton-chooses-chelsea-star-cole-palmer-manchester-city-s-rodri-player-year')">Share</span>
+          </div>
+      </div>
+      <h3 class="blog-post__heading rad-fade-down" data-aos="fade-up">Cole Palmer vs. Rodri: Chris Sutton Picks Player of the Year</h3>
+      <p class="blog-post__meta rad-fade-down" data-aos="fade-up">Chelsea's Cole Palmer has emerged as a standout performer, capturing the attention of fans with his impressive displays in the Premier League this season.</p>
+  </div>
+
+  <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post" data-aos="fade-up" data-aos-delay="200">
+      <div class="blog-post__image-container">
+          <img class="lozad blog-post__cover" 
+               src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FRonaldo-Benzema-and-Mane.jpg.webp&w=3840&q=75" 
+               data-src="https://khelnow.com/_next/image?url=https%3A%2F%2Fassets-webp.khelnow.com%2Fd7293de2fa93b29528da214253f1d8d0%2F1280x720%2Fnews%2Fuploads%2F2023%2F09%2FRonaldo-Benzema-and-Mane.jpg.webp&w=3840&q=75" 
+               alt="Blog 2 Cover" width="400" height="200" 
+               data-aos="fade-up" />
+          <div class="blog-post__overlay">
+              <a href="https://khelnow.com/football/2023-09-world-football-favourites-win-saudi-pro-league-2023-24-golden-boot" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="blog-post__action">Read</a>
+              <span class="blog-post__action" onclick="share('https://khelnow.com/football/2023-09-world-football-favourites-win-saudi-pro-league-2023-24-golden-boot')">Share</span>
+          </div>
+      </div>
+      <h3 class="blog-post__heading rad-fade-down" data-aos="fade-up">Top Seven Favourites to Win Saudi Pro League 2023-24 Golden Boot</h3>
+      <p class="blog-post__meta rad-fade-down" data-aos="fade-up">The Saudi Pro League has taken the footballing world by storm in the 2023-24 season, thanks to a lavish summer shopping spree that brought some of Europe's biggest stars to the Middle East.</p>
+  </div>
+
+  <div class="col-12 col-md-4 mb-5 mb-md-0 blog-post" data-aos="fade-up" data-aos-delay="400">
+      <div class="blog-post__image-container">
+          <img class="lozad blog-post__cover" 
+               src="img/works/Player.png" 
+               data-src="img/works/Player.png" 
+               alt="Blog 3 Cover" width="400" height="200" 
+               data-aos="fade-up" />
+          <div class="blog-post__overlay">
+              <a href="https://breakingthelines.com/player-analysis/orel-mangala-the-pattex-signing-bringing-ball-control-to-everton/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="blog-post__action">Read</a>
+              <span class="blog-post__action" onclick="share('https://breakingthelines.com/player-analysis/orel-mangala-the-pattex-signing-bringing-ball-control-to-everton/')">Share</span>
+          </div>
+      </div>
+      <h3 class="blog-post__heading rad-fade-down" data-aos="fade-up">Orel Mangala: The “Pattex” Signing Bringing Ball Control to Everton</h3>
+      <p class="blog-post__meta rad-fade-down" data-aos="fade-up">Orel Mangala has had a hectic seven months in his career. In late January, he made a move from Nottingham Forest to Lyon.</p>
+  </div>
+</div>
+
+  <!-- Additional Blog Section -->
+<div class="container" style="padding-bottom: 10px;"> <!-- Reduced bottom padding -->
+  <div class="row row--padded mb-0 rad-fade-down" data-aos="fade-up" data-aos-delay="500">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-md-row">
+          <div class="col-12 col-md-7 pr-md-0 text-left">
+              <img class="lozad img-responsive img-clip-right-backward" 
+                   src="img\works\1_eUad-LxrBYbY93tPqvjIXQ.webp" 
+                   data-src="img\works\1_eUad-LxrBYbY93tPqvjIXQ.webp" 
+                   alt="blogs" 
+                   style="max-width: 80%; height: auto;" 
+                   data-aos="fade-right" />
+          </div>
+
+          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" data-aos="fade-up">
+              <h4>Visualizing Football Passes in Zone 14 & Half-Space: A Step-by-Step Guide Using Python</h4>
+              <p class="lead">
+                  In football analytics, understanding how a team distributes the ball and exploits key areas of the pitch can provide deep insights into game strategies. One popular way to visualize this is through pass maps, particularly focusing on specific zones like Zone 14 and Half-Spaces.
+              </p>
+              <a href="https://medium.com/@jeebakbasak203/visualizing-football-passes-in-zone-14-half-space-a-step-by-step-guide-using-python-bb877b5637bb" 
+                 class="btn btn-primary" 
+                 target="_blank">
+                  Read Full
+                  <img src="img\logos\medium-round-icon.png" alt="Logo" style="width: 30px; height: 30px; margin-left: 10px; margin-right: 20px;">
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates & Licenses</h2>
+  <div class="certificate-container">
+      <!-- Left side: Image and navigation buttons -->
+      <div class="image-container">
+          <img id="certificateImage" src="cert1.jpg" alt="Certificate Image">
+          <div class="navigation-buttons">
+              <button class="arrow-button" id="prevButton" disabled>&#10094;</button>
+              <button class="arrow-button" id="nextButton">&#10095;</button>
+          </div>
+      </div>
+      <!-- Right side: Certificate details -->
+      <div class="details-container">
+          <h3 id="certificateTitle">Introduction to MATLAB</h3>
+          <p><strong>Issued by:</strong> <span id="certificateIssuer">Great Learning</span></p>
+          <p><strong>Completion Date:</strong> <span id="certificateDate">November 2024</span></p>
+          <p><strong>Credential ID:</strong> <span id="certificateID">581</span></p>
+          <p id="certificateDescription">Skills: MATLAB</p>
+      </div>
+  </div>
+</section>
+
+
+
+<section id="services" class="section rad-animation-group section--border-bottom">
+  <div class="container">
+      <h2 class="rad-fade-down">Services</h2>
+
+      <div class="row row--padded rad-animation-group rad-fade-down">
+
+          <!-- Image Section -->
+          <div class="col-12 col-md-7 pl-md-0 text-left">
+            <div class="col-12 pl-md-0 text-right">
+              <!-- Make the image larger by setting its width to 100% -->
+              <img class="lozad img-responsive img-clip-right-backward" src="img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg"
+                  data-src="img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg"
+                  data-srcset="img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg 1x, img\who-am-i\WhatsApp Image 2024-02-21 at 2.42.08 PM.jpeg 2x"
+                  alt="Product Price Recommendation" style="width: 100%; height: auto;" />
+          </div>
+
+          <!-- Text before the carousel -->
+          <div class="col-12" style="margin-top: 20px;">
+            <h4 class="text-left" style="font-weight: normal; font-size: 22px; color: #000000;">Companies I have worked with</h4>
+        </div>
+
+          <!-- Start of the Carousel under the image -->
+          <div id="brandCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="2000" style="margin-top: 40px;">
+              <div class="carousel-inner" style="max-width: 30%; margin: auto;">
+                  <div class="carousel-item active">
+                      <img src="img\works\gameintouch.png" class="d-block w-100" alt="Brand 1">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img\works\khelnow.png" class="d-block w-100" alt="Brand 2">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img\works\sk.jpg" class="d-block w-100" alt="Brand 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/works/bts-logo-.png" class="d-block w-100" alt="Brand 4">
+                </div>
+                <div class="carousel-item">
+                  <img src="img\works\FT-Logo-1 (1).png" class="d-block w-100" alt="Brand 5">
+              </div>
+              <div class="carousel-item">
+                <img src="img\works\the_football_digest_logo.jpg" class="d-block w-100" alt="Brand 5">
+            </div>
+
+                  <!-- Add more carousel items here -->
+              </div>
+          </div>
+          <!-- End of the Carousel -->
+
+          </div>
+
+          <!-- Services Section -->
+          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+              <div class="services-list">
+                  <!-- Data Analysis Service -->
+                  <div class="service-row">
+                      <h3>Data Analytics</h3>
+                      <p>Looking for better opportunities as an Intern or Freelancer in the field of Data Science.</p>
+                  </div>
+
+                  <!-- Sports Performance Analysis -->
+                  <div class="service-row">
+                      <h3>Sports Performance Analysis</h3>
+                      <p>Analyze football match data, player performance, and tactical insights to help coaches and teams improve strategies.</p>
+                  </div>
+
+                  <!-- Website & Application Development -->
+                  <div class="service-row">
+                      <h3>Web Application Development</h3>
+                      <p>Build custom web applications for sports analytics, real-time data processing, and performance tracking.</p>
+                  </div>
+
+                  <!-- Web Content Writing Service -->
+                  <div class="service-row">
+                    <h3>Web Content Writing</h3>
+                    <p>Over 3+ years of experience in SEO optimization and creative content writing.</p>
+                  </div>
+
+                  <!-- Hire Button -->
+                  <div class="text-right mt-4">
+                      <a href="https://wa.me/918697534158" class="btn btn-primary" target="_blank">
+                          Wanna Hire! <img src="img\\logos\\whatsapp-32.png" alt="Logo" style="width: 20px; height: 20px; margin-left: 10px;">
+                      </a>
+                  </div>
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="section section--contact pt-0">
+  <div class="container">
+      <div class="contact">
+          <h2>Get in touch with Jeebak</h2>
+          <div class="row pt-2">
+              <!-- Profile Picture -->
+              <img class="lozad img-responsive image-left-overflow" 
+                   src="img\who-am-i\WhatsApp Image 2024-02-16 at 5.29.32 PM.jpeg" 
+                   alt="Profile Picture" 
+                   style="width: 30%; height: auto;" />
+              
+              <!-- Contact Information -->
+              <div class="col-12 col-lg-5 contact__info">
+                  <!-- Phone Number -->
+                  <h4>Phone Number</h4>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" 
+                         placeholder="Enter your phone number" required>
+                  
+                  <!-- Email -->
+                  <h4>Email</h4>
+                  <input type="email" id="email" name="email" 
+                         placeholder="Enter your email address" required>
+                  
+                  <!-- Queries -->
+                  <h4>Queries</h4>
+                  <textarea id="queries" name="queries" 
+                            placeholder="Enter your queries"></textarea>
+                  
+                  <br /><br />
+                  
+                  <!-- Submit Button -->
+                  <button class="btn btn-primary" onclick="sendMessage()">
+                      <i class="icon-ml-fill"></i>
+                      Send Message
+                      <img src="img\logos\—Pngtree—white message icon_4631512.png" 
+                           alt="Message Icon" 
+                           style="width: 30px; height: 30px; margin-left: 10px;">
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init('GdmTDJsfmOwtn-PUo'); // Replace 'your_user_id' with your EmailJS User ID
+
+  function sendMessage() {
+      // Retrieve input values
+      var phoneNumber = document.getElementById("phoneNumber").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var queries = document.getElementById("queries").value.trim();
+
+      // Input validation
+      if (!phoneNumber || !email || !queries) {
+          alert("Please fill in all the fields.");
+          return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+      }
+
+      // Prepare EmailJS template parameters
+      var templateParams = {
+          phone: phoneNumber,
+          email: email,
+          query: queries,
+      };
+
+      // Disable the button temporarily
+      var button = document.querySelector('.btn');
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      // Send email using EmailJS
+      emailjs.send('service_rd2r3if', 'template_ltvz76d', templateParams) // Replace 'your_template_id' with your Template ID
+          .then(() => {
+              alert("Email sent successfully!");
+              button.disabled = false;
+              button.textContent = 'Send Message';
+
+              // Reset form fields
+              document.getElementById("phoneNumber").value = '';
+              document.getElementById("email").value = '';
+              document.getElementById("queries").value = '';
+          })
+          .catch((error) => {
+              console.error("Error:", error);
+              alert("Failed to send email. Please try again later.");
+              button.disabled = false;
+              button.textContent = 'Send Message';
+          });
+  }
+</script>
+
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+ <!-- Back to Top Start -->
+ <div class="backto-top">
+  <div>
+      <i data-feather="arrow-up"></i>
+  </div>
+</div>
+<!-- Back to Top End -->
+	
+	
+
+	
+
+<footer class="footer">
+  <div class="container">
+
+      <div class="footer__left">
+          <div class="footer__copy">
+              © Jeebak. All rights reserved. 2024
+          </div>
+      </div>
+
+      <div class="footer__links">
+          <ul class="navbar-nav ">
+              <li class="nav-item">
+                  <a class="nav-link" href="#home">HOME</a>
+              </li>
+
+              <li class="nav-item">
+                  <a data-scroll class="nav-link" href="#about">ABOUT</a
+  >
+
+              <li class="nav-item">
+                  <a data-scroll class="nav-link" href="#portfolio"
+                    >PORTFOLIO</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="#contact"
+                    >CONTACT</a
+                  >
+                </li>
+
+          </ul>
+      </div>
+
+      <div class="footer__right">
+          <div class="footer__copy">
+              Site built by Jz with
+
+
+
+
+
+
+          </div>
+
+      </div>
+      <img src="img\logos\image-removebg-preview (2).png" alt="Logo" style="width: 30px; height: 30px; transform: translateY(-8px) rotate(25deg);">
+
+
+  </div>
+</footer>
+
+  <script src='https://mattdancho.netlify.app/js/rad-animations.js'></script>
+<script src='https://mattdancho.netlify.app/js/library/lozad.min.js'></script>
+<script>
+  window.addEventListener("load", function() {
+    var observer = window.lozad(".lozad", {
+      rootMargin: window.innerHeight / 2 + "px 0px",
+      threshold: 0.01
+    }); 
+    observer.observe();
+  });
+</script>
+<script src='https://mattdancho.netlify.app/js/library/jquery-3.3.1.slim.min.js'></script>
+<script src='https://mattdancho.netlify.app/js/library/bootstrap.min.js'></script>
+<script src='https://mattdancho.netlify.app/js/sticky-header.js'></script>
+<script src='https://mattdancho.netlify.app/js/library/smooth-scroll.polyfills.min.js'></script>
+<script src='https://mattdancho.netlify.app/js/library/fontfaceobserver.js'></script>
+<script>
+  (function(w) {
+    
+    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+      return;
+    }
+    var fontA = new w.FontFaceObserver("Inter", {
+      weight: 300
+    });
+    var fontB = new w.FontFaceObserver("Inter", {
+      weight: 400
+    });
+    var fontC = new w.FontFaceObserver("Inter", {
+      weight: 500
+    });
+    var fontD = new w.FontFaceObserver("Inter", {
+      weight: 600
+    });
+    var fontE = new w.FontFaceObserver("Inter", {
+      weight: 700
+    });
+    var fontF = new w.FontFaceObserver("Inter", {
+      weight: 900
+    });
+    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
+      w.document.documentElement.className += " fonts-loaded";
+    });
+  })(this);
+</script>
+<script>
+  const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+</script>
+
+<script>
+  const phrases = ["Asprinig Data Scientist.", "Data Analyst.", "a Coder.", "a Web-developer"];
+  let currentPhraseIndex = 0;
+  let currentCharIndex = 0;
+  let currentText = "";
+  const textElement = document.getElementById("text");
+
+  // Function to type the current phrase
+  function typeText() {
+      if (currentCharIndex < phrases[currentPhraseIndex].length) {
+          // Add next character to the text
+          currentText += phrases[currentPhraseIndex].charAt(currentCharIndex);
+          textElement.textContent = currentText;
+          currentCharIndex++;
+          setTimeout(typeText, 100); // Speed of typing
+      } else {
+          setTimeout(backspaceText, 1000); // Wait for a second before starting to backspace
+      }
+  }
+
+  // Function to backspace the text
+  function backspaceText() {
+      if (currentCharIndex > 0) {
+          // Remove the last character from the text
+          currentText = currentText.substring(0, currentText.length - 1);
+          textElement.textContent = currentText;
+          currentCharIndex--;
+          setTimeout(backspaceText, 50); // Speed of backspacing
+      } else {
+          // Move to the next phrase and start typing again
+          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+          setTimeout(typeText, 500); // Wait before starting the typing animation for the next phrase
+      }
+  }
+
+  // Start the typing effect
+  typeText();
+</script>
+
+<script>
+  document.querySelectorAll('.skill').forEach(skill => {
+      const progressBar = skill.querySelector('.progress-bar');
+      const percentageText = document.createElement('span');
+      percentageText.classList.add('percentage-text');
+      skill.appendChild(percentageText);
+
+      progressBar.style.width = progressBar.getAttribute('data-skill') + "%";
+
+      skill.addEventListener('mouseenter', () => {
+          progressBar.style.animation = 'pulse 1s infinite';
+          percentageText.style.display = 'block';
+          percentageText.textContent = `${progressBar.getAttribute('data-skill')}%`;
+      });
+
+      skill.addEventListener('mouseleave', () => {
+          progressBar.style.animation = '';
+          percentageText.style.display = 'none';
+      });
+  });
+
+  // Add keyframes for animation
+  const style = document.createElement('style');
+  style.innerHTML = `
+      @keyframes pulse {
+          0%, 100% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 0.5;
+          }
+      }
+      .progress {
+          position: relative;
+          height: 10px;
+          width: 100%;
+          background: #ddd;
+          border-radius: 5px;
+      }
+      .progress-bar {
+          height: 100%;
+          border-radius: 5px;
+          background: linear-gradient(90deg, white, #ec4434);
+          transition: width 1.5s ease, opacity 0.5s;
+          position: relative;
+      }
+      .percentage-text {
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 12px;
+          color: #ec4434;
+          display: none;
+      }
+  `;
+  document.head.appendChild(style);
+</script>
+
+<!-- Add AOS JavaScript library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 1000,  // Animation duration
+        easing: 'ease-in-out',  // Easing function for animation
+        once: true  // Animations run once when scrolled into view
+    });
+</script>
+
+<!-- Share Button Script -->
+<script>
+  function share(url) {
+      if (navigator.share) {
+          navigator.share({
+              title: 'Check out this blog!',
+              url: url
+          }).catch(error => console.error('Error sharing:', error));
+      } else {
+          // Fallback for older browsers or devices
+          const shareUrl = encodeURIComponent(url);
+          const shareText = 'Check out this amazing blog: ';
+          const shareWindow = window.open(
+              `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+              'Share on Facebook',
+              'width=600,height=400'
+          );
+          shareWindow.focus();
+      }
+  }
+</script>
+
+<script>
+  // Feather Icons replacement
+  feather.replace();
+
+  // Get the button element
+  const backToTopButton = document.querySelector('.backto-top');
+
+  // Show the button when scrolling down 100px from the top
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+          backToTopButton.classList.add('show');
+      } else {
+          backToTopButton.classList.remove('show');
+      }
+  });
+
+  // Scroll to the top when the button is clicked
+  backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+</script>
+
+
+
+ 
+
+<script>
+  // Certificates Data
+  const certificates = [
+      {
+          image: "img\\works\\matlab.jpg",
+          title: "Introduction to MATLAB",
+          issuer: "Great Learning",
+          date: "November 2024",
+          id: "581",
+          description: "Skills: MATLAB"
+      },
+      {
+        image: "img\\works\\fa.jpg",
+        title: "FA Level 1 Talent Identification",
+        issuer: "The Football Association",
+        date: "May 2024",
+        id: "6619a445-6274-4637-ad77-27d20f000224",
+        description: "Level 1 Talent Identification for Football Scout"
+    },
+      {
+          image: "img\\works\\powerbi.jpg",
+          title: "PowerBI Basics with Mini Project",
+          issuer: "CHRIST Infotech",
+          date: "November 2024",
+          description: "Skills: Microsoft Power BI, Data Visualization, Data Analytics"
+      },
+      {
+          image: "img\\works\\perfomanceanalysis.jpg",
+          title: "Beginner's Guide to Football Performance Analysis",
+          issuer: "TagMango",
+          date: "June 2024",
+          id: "667e6b4055685db22910e8d2",
+          description: "Skills: Sports Performance Analysis, Sports Analytics"
+      },
+      {
+          image: "img\\works\\ibm-data.png",
+          title: "Data Analysis with Python",
+          issuer: "IBM",
+          date: "July 2022",
+          id: "ea05ee1bd8f34d9d8ff579d2b7e91d25",
+          description: "Skills: Data Analysis, Data Analytics, Python"
+      },
+      {
+          image: "img\\works\\tableau.jpg",
+          title: "Data Visualization using Tableau",
+          issuer: "Great Learning",
+          date: "July 2022",
+          id: "LOANMTRD",
+          description: "Skills: Tableau, Data Visualization, Data Analytics"
+      },
+      {
+          image: "img\\works\\sql.jpg",
+          title: "My SQL Basics",
+          issuer: "Great Learning",
+          date: "July 2022",
+          id: "RURSKGWM",
+          description: "Skills: SQL, MySQL, Data Analytics"
+      },
+      {
+          image: "img\\works\\kaggle-python.png",
+          title: "Python Programming Basics",
+          issuer: "Kaggle",
+          date: "July 2022",
+          description: "Skills: Python"
+      },
+      {
+          image: "img\\works\\bharti-axa.png",
+          title: "Anti-Money Laundering",
+          issuer: "Bharti AXA Life Insurance",
+          date: "June 2022",
+          id: "13559/762644",
+          description: "Skills: AML Compliance"
+      },
+      {
+          image: "img\\works\\ust.png",
+          title: "Create Your First Python Program",
+          issuer: "UST",
+          date: "June 2022",
+          id: "FY4H5K4S26XL",
+          description: "Skills: Python"
+      },
+      {
+          image: "img\\works\\wordpress.png",
+          title: "Create a Website Using WordPress",
+          issuer: "Coursera",
+          date: "June 2022",
+          id: "JALLNJAZEPZ3",
+          description: "Skills: WordPress Development"
+      },
+      {
+          image: "img\\works\\excel.png",
+          title: "Data Analysis using Excel",
+          issuer: "Great Learning",
+          date: "June 2022",
+          id: "62883",
+          description: "Skills: Microsoft Excel, Data Analytics"
+      },
+      {
+        image: "img\\works\\ibm-2.png",
+        title: "Data Science 101 (DS0101EN, provided by IBM)",
+        issuer: "IBM",
+        date: "June 2022",
+        id: "841ae17be92f4c03989b9b622a41b423",
+        description: "Skills: R (Programming Language), Python (Programming Language)"
+    },
+    {
+        image: "img\\works\\cloud.jpg",
+        title: "Learn Cloud Computing from Scratch for Beginners",
+        issuer: "EDUONIX",
+        date: "June 2022",
+        id: "f2c114c57e",
+        description: "Skills: Cloud Computing"
+    },
+    {
+        image: "img\\works\\bharti-axa-ulip.png",
+        title: "ULIP Certification",
+        issuer: "Bharti AXA Life Insurance",
+        date: "June 2022",
+        id: "6472/762644",
+        description: "The knowledge and understanding of Unit Linked Insurance Plans (ULIPs), focusing on their features, benefits, and how they align with financial planning and investment strategies"
+    }
+   
+  ];
+
+
+  let currentIndex = 0;
+
+  // DOM Elements
+  const certificateImage = document.getElementById("certificateImage");
+  const certificateTitle = document.getElementById("certificateTitle");
+  const certificateIssuer = document.getElementById("certificateIssuer");
+  const certificateDate = document.getElementById("certificateDate");
+  const certificateID = document.getElementById("certificateID");
+  const certificateDescription = document.getElementById("certificateDescription");
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
+
+  // Update Certificate Display
+  function updateCertificateDisplay() {
+      const certificate = certificates[currentIndex];
+      certificateImage.src = certificate.image;
+      certificateTitle.textContent = certificate.title;
+      certificateIssuer.textContent = certificate.issuer;
+      certificateDate.textContent = certificate.date || "N/A";
+      certificateID.textContent = certificate.id || "N/A";
+      certificateDescription.textContent = certificate.description;
+
+      // Enable or disable buttons
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === certificates.length - 1;
+  }
+
+  // Button Event Listeners
+  prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCertificateDisplay();
+      }
+  });
+
+  nextButton.addEventListener("click", () => {
+      if (currentIndex < certificates.length - 1) {
+          currentIndex++;
+          updateCertificateDisplay();
+      }
+  });
+
+  // Initial Display
+  updateCertificateDisplay();
+</script>
+
+<script>
+  // Ensure the carousel is fully initialized and functional
+  const carouselElement = document.querySelector('#brandCarousel');
+  const carousel = new bootstrap.Carousel(carouselElement, {
+    interval: 2000,  // Set interval to 2000ms (2 seconds)
+    ride: 'carousel',
+    pause: 'hover'   // Pause on hover (optional)
+  });
+</script>
+
+  
+</body>
+
+</html>
